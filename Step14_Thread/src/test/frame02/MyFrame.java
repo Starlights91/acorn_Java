@@ -15,9 +15,10 @@ public class MyFrame extends JFrame {
 
 		JButton startBtn = new JButton("작업시작");
 		/*
-		 * - type 추론이 가능하다면 지역변수의 type 선언 대신에 var 로 선언 할수 있다. - java 10 에서 추가된 문법, 아직도
-		 * 실무에서는 1.8 버전을 쓰는 곳이 많기 때문에 주의! - 지역변수에만 사용가능, 필드는 안됨 - 인터페이스 type 추론 불가 -
-		 * null 로 초기화 불가
+		 * - type 추론이 가능하다면 지역변수의 type 선언 대신에 var 로 선언 할수 있다. 
+		 * - java 10 에서 추가된 문법, 아직도 실무에서는 1.8 버전을 쓰는 곳이 많기 때문에 주의! 
+		 * - 지역변수에만 사용가능, 필드는 안됨 - 인터페이스 type 추론 불가 
+		 * - null 로 초기화 불가
 		 */
 		var startBtn2 = new JButton("작업시작2");
 
