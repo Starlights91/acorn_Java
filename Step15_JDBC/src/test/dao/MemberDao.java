@@ -1,4 +1,4 @@
- package test.dao;
+package test.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -16,7 +16,7 @@ import test.util.DBConnector;
  */
 public class MemberDao {
 	
-	//회원번호를 이용해서 회원 1명의 정보를 리턴하는 메소드
+	// 2. 회원번호를 이용해서 회원 1명의 정보를 리턴하는 메소드
 	public MemberDto getByNum(int num) { //여기 매개변수로 전달되는 int num 의 num 은 primary key.
 		//MemberDto 객체의 참조값을 담을 지역변수를 미리 만든다.(객체 생성은 while 문 안에)
 		MemberDto dto=null;
@@ -64,7 +64,7 @@ public class MemberDao {
 		return dto; //잊지 말기!
 	}
 	
-	//회원 전체 목록을 SELECT 해서 List 에 담아서 리턴하는 메소드
+	// 3. 회원 전체 목록을 SELECT 해서 List 에 담아서 리턴하는 메소드
 	public List<MemberDto> selectAll(){
 		//회원정보를 누적시킬 ArrayList 객체 미리 준비하기
 		List<MemberDto> list=new ArrayList<>();
@@ -113,7 +113,7 @@ public class MemberDao {
 		return list;
 	}
 	
-	//회원 한명의 정보를 DB 에서 수정하고 성공여부를 리턴하는 메소드
+	// 4. 회원 한명의 정보를 DB 에서 수정하고 성공여부를 리턴하는 메소드
 	public boolean update(MemberDto dto) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -153,7 +153,7 @@ public class MemberDao {
 		}
 	}
 	
-	//회원한명의 정보를 DB 에서 삭제하고 성공여부를 리턴하는 메소드
+	// 5. 회원한명의 정보를 DB 에서 삭제하고 성공여부를 리턴하는 메소드
 	public boolean deleteByNum(int num) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -190,7 +190,7 @@ public class MemberDao {
 		}
 	}
 	
-	//회원 한명의 정보를 DB 에 저장하고 성공여부를 리턴하는 메소드
+	// 1. 회원 한명의 정보를 DB 에 저장하고 성공여부를 리턴하는 메소드
 	public boolean insert(MemberDto dto) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -228,6 +228,7 @@ public class MemberDao {
 			return false; //작업 실패라는 의미에서 false 리턴하기
 		}
 	}
+	
 }
 
 

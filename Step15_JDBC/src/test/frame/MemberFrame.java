@@ -44,7 +44,7 @@ public class MemberFrame extends JFrame{
 		JButton deleteBtn=new JButton("삭제");
 		var updateBtn=new JButton("수정");
 		
-		//
+		//수정 버튼의 동작:
 		updateBtn.addActionListener((e)->{
 			//선택된 row 의 index 값을 읽어온다
 			int selectedRow=table.getSelectedRow();
@@ -83,7 +83,7 @@ public class MemberFrame extends JFrame{
 				//입력한 이름과, 주소를 읽어와서
 				String name=inputName.getText();
 				String addr=inputAddr.getText();
-				//수정 반영한다
+			//수정 반영한다
 				MemberDto newDto = new MemberDto();
 				newDto.setNum(num);
 				newDto.setName(name);
